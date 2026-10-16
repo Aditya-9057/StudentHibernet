@@ -51,10 +51,6 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "roll=" + roll +
-                ", name='" + name + '\'' +
-                ", marks=" + marks +
-                '}';
+        return roll + "\t\t" + name + "\t\t" + marks;
     }
 }

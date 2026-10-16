@@ -13,9 +13,9 @@ public class SelectStudent
     public static void main( String[] args )
     {
         Configuration config = new Configuration();
-        config.configure("hibernate.cfg.xml");
+       // config.configure("hibernate.cfg.xml");
 
-//        config.addAnnotatedClass(Student.class);
+       config.addAnnotatedClass(Student.class);
 
       SessionFactory factory = config.buildSessionFactory();
 
@@ -23,13 +23,13 @@ public class SelectStudent
        Session session = factory.openSession();
 
        // Eager fetching
-         // Student st = session.find(Student.class,101); //get()
+          Student st = session.find(Student.class,101); //get()
 
         //Eager fetching
 //          Student st = session.byId(Student.class).load(101);
 
         //Lazy fetching
-        Student st = session.byId(Student.class).getReference(102);
+      //  Student st = session.byId(Student.class).getReference(102);
 
             if(st!=null){
 //                System.out.println("Name : "+st.getName());
